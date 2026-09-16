@@ -1,4 +1,4 @@
- 
+
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import 'remixicon/fonts/remixicon.css'
