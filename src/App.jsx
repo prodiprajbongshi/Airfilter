@@ -7,6 +7,7 @@ import FilteringProcess from './components/FilteringProcess'
 import Product from './components/Product'
 import FinalProduct from './components/ProductCard'
 import Footer from './components/Footer'
+import ProductGallery from './components/ProductImage'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <Problem/>
+      <ProductGallery/>
       <Technology/>
       <FilteringProcess/>
       <Product/>
