@@ -194,7 +194,7 @@ function App() {
         },
         {
           x: 1100,
-          y: 880,
+          y: 970,
 
           ease: "none",
 
@@ -408,7 +408,7 @@ useGSAP(
 
         <div
           ref={HeroImageWrapper}
-          className="absolute bottom-0 left-0 z-20 w-[38%] lg:w-[40%]"
+          className="absolute bottom-10 left-25   z-20 w-[40%] lg:w-[24%]"
         >
           <img
             ref={HeroImage}

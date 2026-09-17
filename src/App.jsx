@@ -6,6 +6,7 @@ import 'remixicon/fonts/remixicon.css'
 import Problem from './components/Problem'
 import Technology from './components/Technology'
 import FilteringProcess from './components/FilteringProcess'
+import Product from './components/Product'
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
       <Problem/>
       <Technology/>
       <FilteringProcess/>
-      {/* <About/> */}
+      <Product/>
+      <About/>
     </>
   )
 }
