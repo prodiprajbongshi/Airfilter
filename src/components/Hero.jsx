@@ -408,7 +408,7 @@ useGSAP(
 
         <div
           ref={HeroImageWrapper}
-          className="absolute bottom-10 left-25   z-20 w-[40%] lg:w-[24%]"
+          className="absolute bottom-4 left-38   z-20 w-[40%] lg:w-[24%]"
         >
           <img
             ref={HeroImage}
