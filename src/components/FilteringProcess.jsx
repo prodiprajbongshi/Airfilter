@@ -156,7 +156,7 @@ const FilteringProcess = () => {
       className="
     relative
     overflow-hidden
-    bg-[#f3f4f6]
+    bg-[#111315]
     px-6
     pt-28
     pb-8
@@ -200,7 +200,7 @@ const FilteringProcess = () => {
           rounded-[2.5rem]
           border
           border-black/10
-          bg-[#e9eaec]
+          bg-[#6b7280]
         "
           >
             {/* =====================================
@@ -213,12 +213,12 @@ const FilteringProcess = () => {
             absolute
             left-1/2
             top-1/2
-            h-[500px]
-            w-[500px]
+            h-125
+            w-125
             -translate-x-1/2
             -translate-y-1/2
             rounded-full
-            bg-black/[0.025]
+            bg-black/2.5
             blur-[100px]
           "
             />
@@ -361,7 +361,7 @@ const FilteringProcess = () => {
 
             {/* =====================================
             FILTER CARDS CONTAINER
-        ===================================== */}
+            ===================================== */}
 
             <div
               className="
@@ -385,10 +385,11 @@ const FilteringProcess = () => {
               absolute
               w-full
               max-w-4xl
-              rounded-[2rem]
+              rounded-4xl
               border
               border-black/10
-              bg-[#dfe1e4]
+              bg-[#111315]
+              text-white
               p-8
               opacity-0
               sm:p-10
@@ -401,13 +402,13 @@ const FilteringProcess = () => {
                   text-[10px]
                   uppercase
                   tracking-[0.3em]
-                  text-black/35
+                  text-white/80
                 "
                   >
                     Incoming Air
                   </span>
 
-                  <span className="text-sm text-black/30">01</span>
+                  <span className="text-sm text-white/80">01</span>
                 </div>
 
                 <div className="mt-16 sm:mt-20 lg:mt-24">
@@ -415,7 +416,7 @@ const FilteringProcess = () => {
                     className="
                   ri-cloud-windy-line
                   text-5xl
-                  text-black/40
+                  text-white/80
                   sm:text-6xl
                   lg:text-7xl
                 "
@@ -440,7 +441,7 @@ const FilteringProcess = () => {
                   max-w-lg
                   text-base
                   leading-7
-                  text-black/45
+                  text-white/60
                   lg:text-lg
                 "
                   >
@@ -537,8 +538,8 @@ const FilteringProcess = () => {
               max-w-4xl
               rounded-[2rem]
               border
-              border-black/10
-              bg-white
+              border-white/10
+             bg-[#111315]
               p-8
               opacity-0
               sm:p-10
@@ -551,13 +552,13 @@ const FilteringProcess = () => {
                   text-[10px]
                   uppercase
                   tracking-[0.3em]
-                  text-black/35
+                  text-white/80
                 "
                   >
                     Filtration Stage 02
                   </span>
 
-                  <span className="text-sm text-black/30">03</span>
+                  <span className="text-sm text-white/80">03</span>
                 </div>
 
                 <div className="mt-16 sm:mt-20 lg:mt-24">
@@ -565,7 +566,7 @@ const FilteringProcess = () => {
                     className="
                   ri-shield-check-line
                   text-5xl
-                  text-black/50
+                text-white/80
                   sm:text-6xl
                   lg:text-7xl
                 "
@@ -577,6 +578,7 @@ const FilteringProcess = () => {
                   text-5xl
                   font-semibold
                   tracking-[-0.04em]
+                  text-white/80
                   sm:text-6xl
                   lg:text-8xl
                 "
@@ -590,7 +592,7 @@ const FilteringProcess = () => {
                   max-w-lg
                   text-base
                   leading-7
-                  text-black/45
+                 text-white/60
                   lg:text-lg
                 "
                   >
