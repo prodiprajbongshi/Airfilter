@@ -24,7 +24,6 @@ const Problem = () => {
         start: "top 70%",
         end: "top 20%",
         toggleActions: "play none none reverse",
-        // markers: true,
       },
     });
 
@@ -48,15 +47,14 @@ const Problem = () => {
       ProblemTitleLines.current,
       {
         opacity: 0,
-        y: 120,
+        y: 80,
       },
       {
         opacity: 1,
         y: 0,
         duration: 1.2,
         ease: "power4.out",
-        stagger: 0.5,
-        scrub: true,
+        stagger: 0.4,
       },
       "-=0.3",
     );
@@ -98,17 +96,19 @@ const Problem = () => {
     <section
       ref={ProblemSectionRef}
       className="
-    relative
-    flex
-    min-h-screen
-    items-center
-    overflow-hidden
-    bg-[#111315]
-    px-6
-    py-24
-    text-white
-    lg:px-16
-  "
+        relative
+        flex
+        min-h-screen
+        items-center
+        overflow-hidden
+        bg-[#111315]
+        px-5
+        py-20
+        text-white
+        sm:px-8
+        sm:py-24
+        lg:px-16
+      "
     >
       {/* ========================================
       BACKGROUND ELEMENTS
@@ -116,44 +116,53 @@ const Problem = () => {
 
       <div
         className="
-      pointer-events-none
-      absolute
-      left-1/2
-      top-1/2
-      h-[600px]
-      w-[600px]
-      -translate-x-1/2
-      -translate-y-1/2
-      rounded-full
-      bg-white/[0.025]
-      blur-[100px]
-    "
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[400px]
+          w-[400px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-white/[0.025]
+          blur-[80px]
+          sm:h-[500px]
+          sm:w-[500px]
+          lg:h-[600px]
+          lg:w-[600px]
+          lg:blur-[100px]
+        "
       />
 
       {/* Decorative Lines */}
 
       <div
         className="
-      absolute
-      left-6
-      top-0
-      h-full
-      w-px
-      bg-white/[0.08]
-      lg:left-16
-    "
+          absolute
+          left-5
+          top-0
+          h-full
+          w-px
+          bg-white/[0.06]
+          sm:left-8
+          lg:left-16
+          lg:bg-white/[0.08]
+        "
       />
 
       <div
         className="
-      absolute
-      right-6
-      top-0
-      h-full
-      w-px
-      bg-white/[0.08]
-      lg:right-16
-    "
+          absolute
+          right-5
+          top-0
+          h-full
+          w-px
+          bg-white/[0.06]
+          sm:right-8
+          lg:right-16
+          lg:bg-white/[0.08]
+        "
       />
 
       {/* ========================================
@@ -162,35 +171,37 @@ const Problem = () => {
 
       <div
         className="
-      relative
-      z-10
-      mx-auto
-      w-full
-      max-w-7xl
-    "
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-7xl
+        "
       >
-        {/* Section Number */}
+        {/* Section Label Row */}
 
         <div
           ref={ProblemLabelRef}
           className="
-        mb-16
-        flex
-        items-center
-        justify-between
-      "
+            mb-12
+            flex
+            items-center
+            justify-between
+            sm:mb-16
+          "
         >
           <div className="flex items-center gap-3">
-            <span className="h-px w-10 bg-white/30" />
+            <span className="h-px w-8 bg-white/30 sm:w-10" />
 
             <span
               className="
-            text-xs
-            font-medium
-            uppercase
-            tracking-[0.3em]
-            text-white/40
-          "
+                text-[10px]
+                font-medium
+                uppercase
+                tracking-[0.3em]
+                text-white/40
+                sm:text-xs
+              "
             >
               The Problem
             </span>
@@ -198,11 +209,11 @@ const Problem = () => {
 
           <span
             className="
-          text-xs
-          font-medium
-          tracking-[0.3em]
-          text-white/30
-        "
+              text-xs
+              font-medium
+              tracking-[0.3em]
+              text-white/30
+            "
           >
             02
           </span>
@@ -212,28 +223,27 @@ const Problem = () => {
         LARGE TEXT
     ======================================== */}
 
-        <div ref={ProblemTitleRef} className="max-w-6xl">
+        <div ref={ProblemTitleRef} className="max-w-6xl overflow-hidden">
           <h2
             className="
-      text-[clamp(3.5rem,8vw,8.5rem)]
-      font-semibold
-      leading-[0.9]
-      tracking-[-0.05em]
-    "
+              text-[clamp(2.8rem,7vw,8.5rem)]
+              font-semibold
+              leading-[0.92]
+              tracking-[-0.04em]
+              sm:text-[clamp(3rem,7.5vw,8.5rem)]
+              sm:leading-[0.9]
+              sm:tracking-[-0.05em]
+            "
           >
-            <span ref={(el) => (ProblemTitleLines.current[0] = el)}>
+            <span ref={(el) => (ProblemTitleLines.current[0] = el)} className="block">
               The air you
             </span>
 
-            <br />
-
-            <span ref={(el) => (ProblemTitleLines.current[1] = el)}>
-              <span className="text-white/35">breathe</span> isn't
+            <span ref={(el) => (ProblemTitleLines.current[1] = el)} className="block">
+              <span className="text-white/35">breathe</span> isn&apos;t
             </span>
 
-            <br />
-
-            <span ref={(el) => (ProblemTitleLines.current[2] = el)}>
+            <span ref={(el) => (ProblemTitleLines.current[2] = el)} className="block">
               always <span className="text-white/35">clean.</span>
             </span>
           </h2>
@@ -246,37 +256,42 @@ const Problem = () => {
         <div
           ref={ProblemDescriptionRef}
           className="
-        mt-16
-        flex
-        max-w-3xl
-        flex-col
-        gap-6
-        lg:ml-[25%]
-        lg:flex-row
-        lg:items-start
-      "
+            mt-10
+            flex
+            max-w-3xl
+            flex-col
+            gap-5
+            sm:mt-14
+            sm:gap-6
+            md:ml-[15%]
+            lg:ml-[25%]
+            lg:mt-16
+            lg:flex-row
+            lg:items-start
+          "
         >
           <span
             className="
-          mt-2
-          hidden
-          h-px
-          w-12
-          shrink-0
-          bg-white/30
-          lg:block
-        "
+              mt-2
+              hidden
+              h-px
+              w-12
+              shrink-0
+              bg-white/30
+              lg:block
+            "
           />
 
           <p
             className="
-          max-w-xl
-          text-base
-          font-light
-          leading-7
-          text-white/45
-          lg:text-lg
-        "
+              max-w-xl
+              text-sm
+              font-light
+              leading-7
+              text-white/45
+              sm:text-base
+              lg:text-lg
+            "
           >
             Dust, smoke, pollen and microscopic particles can remain hidden in
             the air around you. What you cannot see can still affect the quality
@@ -291,23 +306,27 @@ const Problem = () => {
         <div
           ref={ProblemBottomRef}
           className="
-        mt-20
-        flex
-        items-end
-        justify-between
-        border-t
-        border-white/10
-        pt-6
-      "
+            mt-14
+            flex
+            flex-wrap
+            items-end
+            justify-between
+            gap-4
+            border-t
+            border-white/10
+            pt-5
+            sm:mt-20
+            sm:pt-6
+          "
         >
           <span
             className="
-          text-[10px]
-          font-medium
-          uppercase
-          tracking-[0.3em]
-          text-white/30
-        "
+              text-[10px]
+              font-medium
+              uppercase
+              tracking-[0.3em]
+              text-white/30
+            "
           >
             Invisible particles
           </span>
@@ -317,12 +336,12 @@ const Problem = () => {
 
             <span
               className="
-            text-[10px]
-            font-medium
-            uppercase
-            tracking-[0.3em]
-            text-white/30
-          "
+                text-[10px]
+                font-medium
+                uppercase
+                tracking-[0.3em]
+                text-white/30
+              "
             >
               Air Quality Matters
             </span>

@@ -15,7 +15,7 @@ const App = () => {
       <Problem/>
       <Technology/>
       <FilteringProcess/>
-      <About/>
+      {/* <About/> */}
     </>
   )
 }
