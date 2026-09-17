@@ -171,7 +171,7 @@ const Product = () => {
     border
     border-white/10
     bg-[#1b1e20]
-    bg-[url('./public/images/filter.png')]
+    bg-[url('./images/filter.png')]
     bg-cover
     bg-center
     p-8
@@ -253,7 +253,7 @@ const Product = () => {
     border
     border-white/10
     bg-[#1b1e20]
-    bg-[url('./public/images/sensor.jpg')]
+    bg-[url('./images/sensor.jpg')]
     bg-cover
     bg-center
     p-8
@@ -334,7 +334,7 @@ const Product = () => {
     border
     border-white/10
     bg-[#1b1e20]
-    bg-[url('./public/images/motor.jpg')]
+    bg-[url('./images/motor.jpg')]
     bg-cover
     bg-center
     p-8
@@ -380,7 +380,7 @@ const Product = () => {
                 <i className="ri-settings-5-line text-5xl text-white/80" />
               </div>
 
-              <h3 className="text-5xl font-semibold tracking-[-0.05em] lg:text-7xl">
+              <h3 className="text-5xl font-semibold tracking-tighter lg:text-7xl">
                 Motor
               </h3>
 
@@ -415,7 +415,7 @@ const Product = () => {
     border
     border-white/10
     bg-[#1b1e20]
-    bg-[url('./public/images/mobileApp.jpg')]
+    bg-[url('./images/mobileApp.jpg')]
     bg-cover
     bg-center
     p-8
