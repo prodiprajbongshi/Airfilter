@@ -223,22 +223,8 @@ function App() {
           scrub: 1,
         },
       });
-
-      // ========================================
-      // SPECIFICATION SCROLL ANIMATION
-      // ========================================
-
-      gsap.to(HeroSpec.current, {
-        y: 50,
-        opacity: 0,
-
-        scrollTrigger: {
-          trigger: HeroRef.current,
-          start: "top top",
-          end: "+=400",
-          scrub: 1,
-        },
-      });
+ 
+ 
     },
     {
       scope: HeroRef,
