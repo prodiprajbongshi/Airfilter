@@ -16,22 +16,23 @@ const ProductGallery = () => {
   
     {
       src: "/images/productImage2.jpg",
-      title: "Minimal Design",
+           title: "AEROX",
+
       label: "Side View",
     },
       {
       src: "/images/productImage1.jpg",
-      title: "AEROX",
+      title: "Powerful Airflow",
       label: "Main View",
     },
     {
       src: "/images/productImage3.jpg",
-      title: "Powerful Airflow",
+      title: "Minimal Design",
       label: "Performance",
     },
     {
       src: "/images/productImage4.jpg",
-      title: "Smart Control",
+      title: "Smart Sensor",
       label: "Technology",
     },
   ];
@@ -173,7 +174,7 @@ const ProductGallery = () => {
               Designed
               <br />
 
-              <span className="text-black/30">
+              <span className="text-black/30 tracking-normal">
                 differently.
               </span>
             </h2>
@@ -203,7 +204,7 @@ const ProductGallery = () => {
           className="
             relative
             h-[65vh]
-            min-h-[500px]
+            min-h-125
             w-full
             overflow-hidden
             rounded-[2.5rem]
@@ -314,35 +315,7 @@ const ProductGallery = () => {
             </span>
           </div>
 
-          {/* ========================================= */}
-          {/* Center Product Indicator */}
-          {/* ========================================= */}
-
-          <div
-            className="
-              pointer-events-none
-              absolute
-              left-1/2
-              top-1/2
-              z-10
-              -translate-x-1/2
-              -translate-y-1/2
-            "
-          >
-            <div
-              className="
-                h-24
-                w-24
-                rounded-full
-                border
-                border-white/10
-                bg-white/[0.04]
-                backdrop-blur-sm
-                sm:h-32
-                sm:w-32
-              "
-            />
-          </div>
+       
 
           {/* ========================================= */}
           {/* Bottom Content */}

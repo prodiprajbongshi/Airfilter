@@ -223,132 +223,121 @@ function App() {
           scrub: 1,
         },
       });
- 
- 
     },
     {
       scope: HeroRef,
     },
   );
 
+  // ========================================
+  //   SECOND SECTION ANIMATION
+  // =========================================
+  useGSAP(
+    () => {
+      // ========================================
+      // SECTION TEXT ANIMATION
+      // ========================================
 
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: SectionRef.current,
+          start: "top 70%",
+          toggleActions: "play none none reverse",
+          // markers: true,
+        },
+      });
 
-// ========================================
-//   SECOND SECTION ANIMATION
-// =========================================
-useGSAP(
-  () => {
-    // ========================================
-    // SECTION TEXT ANIMATION
-    // ========================================
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: SectionRef.current,
-        start: "top 70%",
-        toggleActions: "play none none reverse",
-        // markers: true,
-      },
-    });
-
-    // Label
-    tl.fromTo(
-      SectionLabel.current,
-      {
-        opacity: 0,
-        x: -40,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.7,
-        ease: "power3.out",
-        scrub: 1,
-      },
-    )
-
-      // Heading
-      .fromTo(
-        SectionTitle.current,
+      // Label
+      tl.fromTo(
+        SectionLabel.current,
         {
           opacity: 0,
-          y: 80,
+          x: -40,
         },
         {
           opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrub: 1,
-        },
-        "-=0.4",
-      )
-
-      // Description
-      .fromTo(
-        SectionDescription.current,
-        {
-          opacity: 0,
-          y: 40,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          scrub: 1,
-        },
-        "-=0.5",
-      )
-
-      // Features
-      .fromTo(
-        SectionFeatures.current,
-        {
-          opacity: 0,
-          y: 30,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.12,
-          ease: "power3.out",
-          scrub: 1,
-        },
-        "-=0.4",
-      )
-
-      // Button
-      .fromTo(
-        SectionButton.current,
-        {
-          opacity: 0,
-          y: 30,
-          scale: 0.95,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
+          x: 0,
           duration: 0.7,
-          ease: "back.out(1.4)",
+          ease: "power3.out",
           scrub: 1,
-          
         },
-        "-=0.2",
-      );
-  },
-  {
-    scope: SectionRef,
-  },
-);
+      )
 
+        // Heading
+        .fromTo(
+          SectionTitle.current,
+          {
+            opacity: 0,
+            y: 80,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+            scrub: 1,
+          },
+          "-=0.4",
+        )
 
+        // Description
+        .fromTo(
+          SectionDescription.current,
+          {
+            opacity: 0,
+            y: 40,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            scrub: 1,
+          },
+          "-=0.5",
+        )
 
+        // Features
+        .fromTo(
+          SectionFeatures.current,
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrub: 1,
+          },
+          "-=0.4",
+        )
 
-
-
+        // Button
+        .fromTo(
+          SectionButton.current,
+          {
+            opacity: 0,
+            y: 30,
+            scale: 0.95,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.7,
+            ease: "back.out(1.4)",
+            scrub: 1,
+          },
+          "-=0.2",
+        );
+    },
+    {
+      scope: SectionRef,
+    },
+  );
 
   return (
     <main className="overflow-x-hidden">
@@ -408,7 +397,7 @@ useGSAP(
 
         <div
           ref={HeroImageWrapper}
-          className="absolute bottom-4 left-38   z-20 w-[40%] lg:w-[24%]"
+          className="absolute bottom-50 left-10  md:bottom-4 md:left-38   z-20 w-[70%]  md:w-[40%] lg:w-[24%]"
         >
           <img
             ref={HeroImage}
@@ -416,6 +405,106 @@ useGSAP(
             className="block w-full"
             alt="Airfilter"
           />
+        </div>
+
+        {/* ==================================== 
+          MOBILE HERO SECTION CONTENT 
+          ======================================== */}
+        <div className="md:hidden">
+          {/* ========================================
+              TITLE
+          ======================================== */}
+          <h1
+            ref={HeroTitle}
+            className="
+              text-6xl
+              text-white
+              md:text-7xl
+              font-bold
+              leading-none
+              tracking-tight
+              pt-32
+              md:pt-0
+              ms-6
+              sm:text-8xl
+              lg:text-9xl
+            "
+          >
+            Air Purifiers
+          </h1>
+
+          {/* ========================================
+              BUTTON
+          ======================================== */}
+          <div className="pt-116 md:pt-20 ms-6">
+            <div className="mt-3 flex items-center gap-4">
+              <span className="text-3xl font-semibold text-white">99.985%</span>
+
+              <span
+                className="
+                max-w-[140px]
+                text-xs
+                leading-4
+                text-white/50
+              "
+              >
+                Particle filtration efficiency
+              </span>
+            </div>
+
+            <button
+              ref={HeroButton}
+              className="
+              group
+              flex
+              cursor-pointer
+              items-center
+              gap-4
+              rounded-full
+              bg-white
+              px-7
+              py-4
+              text-sm
+              mt-4
+              font-semibold
+              tracking-wide
+              text-black
+              transition-all
+              duration-500
+              hover:bg-black
+              hover:text-white
+            "
+            >
+              <span>Learn More</span>
+
+              <span
+                className="
+                flex
+                h-7
+                w-7
+                items-center
+                justify-center
+                rounded-full
+                bg-black
+                text-white
+                transition-all
+                duration-500
+                group-hover:bg-white
+                group-hover:text-black
+              "
+              >
+                <i
+                  className="
+                  ri-arrow-right-line
+                  text-lg
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
+                />
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* ========================================
@@ -435,6 +524,8 @@ useGSAP(
             pr-10
             text-white
             lg:pl-64
+            hidden
+          md:block
           "
         >
           {/* ========================================
@@ -635,16 +726,6 @@ useGSAP(
           SECOND SECTION
       ======================================== */}
 
-
-
-
-
-
-
-
-
-
-      
       <section
         ref={SectionRef}
         className="
